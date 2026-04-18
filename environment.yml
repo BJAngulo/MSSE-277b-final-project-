@@ -1,0 +1,16 @@
+name: msse_277b_final_project
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - numpy<2.0
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - pip
+  - ipykernel
+  - pip:
+      - mne
+      - torch
