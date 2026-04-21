@@ -10,3 +10,10 @@ data/interim/*
 !data/interim/.gitkeep
 .DS_Store
 Thumbs.db
+
+# segmented EEG cache
+data/segmented_data/
+*.npy
+
+# notebook checkpoints
+.ipynb_checkpoints/
