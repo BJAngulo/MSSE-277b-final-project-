@@ -1,0 +1,2 @@
+ablated_segment,n_samples_remaining,accuracy,f1,roc_auc,delta_accuracy,delta_f1,delta_roc_auc
+baseline,7339,"(0.8272310011461379,)","(0.8444653228890923,)",0.9081153461317152,0.0,0.0,0.0
