@@ -1,0 +1,2 @@
+model_name,window_sec,accuracy,f1,roc_auc,n_folds,notes
+Raw + Baseline CNN,10,0.8642841867403706,0.8746078419006187,0.9243269644213055,5,Baseline Conv1D model on z-scored raw EGG 10-sec segments

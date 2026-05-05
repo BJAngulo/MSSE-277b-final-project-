@@ -1,0 +1,7 @@
+method,model_name,window_sec,accuracy,f1,roc_auc,notes
+Raw + Baseline CNN (10 sec),Raw + Baseline CNN,10,0.8642841867403706,0.8746078419006187,0.9243269644213056,Baseline Conv1D model on z-scored raw EGG 10-sec segments
+Raw + LSTM (10 sec),Raw + LSTM,10,0.7892377959940405,0.8149596546001152,0.827474962401056,LSTM model on z-scored raw EEG 10-sec segments
+Raw + LSTM (15 sec),RAW + LSTM,15,0.7770292577858835,0.8089162160517244,0.8271430133524031,LSTM model on z-scored raw EEG 15-sec segments
+Raw + CNN-LSTM (10 sec),Raw + CNN-LSTM,10,0.7968212229057909,0.8298369713559985,0.8509784439504585,CNN feature extractor followed by LSTM on raw EEG 10-sec segements
+Raw + Deep CNN (10 sec),Raw + Deep CNN,10,0.8499917943022772,0.8608670343517006,0.92021561155058,Deeper ConvID model on z-scored raw EEG 10-sec segments
+Raw + Multi-Scale CNN (10 sec),Raw + MultiScale CNN,10,0.8685745562582406,0.8795296231594131,0.928895005005956,Multi-branch Conv1D kernels on z-scored raw EEG 10-sec segements
