@@ -92,3 +92,22 @@ def extract_band_power_from_array(epoch_data, sfreq):
         all_features.append(band_features)
 
     return np.nan_to_num(np.array(all_features).flatten())
+
+def zscore_segments(X):
+    """
+    Z-score each channel within each sample. 
+    Input shape:
+    (n_samples, n_channels, n_timepoints)
+    """
+
+    mean = X.mean(axis=2, keepdims=True)
+    std = X.std(axis=2, keepdims=True)
+    std[std == 0] = 1.0
+    return (X - mean) / std 
+
+X_raw_10_z = zscore_segments(X_raw_10)
+print(X_raw_10_z.shape)
+
+# Keras Conv1D expects shape: (samples, timepoints, channels)
+X_cnn = np.transpose(X_raw_10_z, (0,2,1))
+print("CNN input shape:", X_cnn.shape)

@@ -1,0 +1,2 @@
+model_name,window_sec,accuracy,f1,roc_auc,n_folds,notes
+Raw + MultiScale CNN,10,0.8685745562582406,0.8795296231594131,0.9288950050059561,5,Multi-branch Conv1D kernels on z-scored raw EEG 10-sec segements
