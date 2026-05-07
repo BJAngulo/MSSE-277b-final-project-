@@ -1,5 +1,5 @@
-window_sec,model_name,accuracy,f1,roc-auc,n-folds,notes
-5.0,LogisticRegression,0.7776059852510018,0.7924864912951575,0.8786350060729345,5,Welch relative band-power features with GroupKFold
+window_sec,model_name,accuracy,f1,roc_auc,n_folds,notes
 5.0,SVM RBF,0.7987627219303793,0.8125608191802302,0.889488370026314,5,Welch relative band-power features with GroupKFold
-10.0,LogisticRegression,0.8018504770593623,0.8106679446177371,0.8848259731250115,5,Welch relative band-power features with GroupKFold
+5.0,LogisticRegression,0.7776059852510018,0.7924864912951575,0.8786350060729345,5,Welch relative band-power features with GroupKFold
 10.0,SVM RBF,0.8272310011461379,0.8444653228890923,0.9081153461317152,5,Welch relative band-power features with GroupKFold
+10.0,LogisticRegression,0.8018504770593623,0.8106679446177371,0.8848259731250115,5,Welch relative band-power features with GroupKFold

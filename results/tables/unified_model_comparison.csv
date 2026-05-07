@@ -1,9 +1,9 @@
 method,model_name,window_sec,accuracy,f1,roc_auc,n_folds,notes
-Raw + Multi-Scale CNN (10 sec),Raw + MultiScale CNN,10,0.8685745562582406,0.8795296231594131,0.928895005005956,,Multi-branch Conv1D kernels on z-scored raw EEG 10-sec segements
-Raw + Baseline CNN (10 sec),Raw + Baseline CNN,10,0.8642841867403706,0.8746078419006187,0.9243269644213056,,Baseline Conv1D model on z-scored raw EGG 10-sec segments
-Raw + Deep CNN (10 sec),Raw + Deep CNN,10,0.8499917943022772,0.8608670343517006,0.92021561155058,,Deeper ConvID model on z-scored raw EEG 10-sec segments
-welch + SVM (10 sec),Welch + SVM,10,0.8272310011461379,0.8444653228890923,0.9081153461317152,5.0,Interpretable Welch relative band-power baseline
-Raw + CNN-LSTM (10 sec),Raw + CNN-LSTM,10,0.7968212229057909,0.8298369713559985,0.8509784439504585,,CNN feature extractor followed by LSTM on raw EEG 10-sec segements
-Raw + LSTM (10 sec),Raw + LSTM,10,0.7892377959940405,0.8149596546001152,0.827474962401056,,LSTM model on z-scored raw EEG 10-sec segments
-Raw + LSTM (15 sec),RAW + LSTM,15,0.7770292577858835,0.8089162160517244,0.8271430133524031,,LSTM model on z-scored raw EEG 15-sec segments
-Raw + PCA + SVM (10 sec),Raw + PCA + SVM,10,0.7028909271537475,0.7784027681001386,0.807439685496161,5.0,Flattened raw EEG with PCA before SVM
+Raw EEG + Deep CNN (10s),Raw + Deep CNN (10s),10,0.730581850187065,0.7395942516155675,0.9265612973783044,5,Deeper Conv1D model on z-scored raw EEG 10-sec segments
+Raw EEG + CNN (10s),Raw + Baseline CNN,10,0.8352667940121972,0.8464947239756736,0.9202965572343562,5,Baseline Conv1D model on z-scored raw EEG 10-sec segments
+Raw EEG + Multi-Scale CNN (10s),Raw EEG + Multi-Scale CNN (10s),10,0.8169484691895033,0.8413765359048864,0.917884965763271,5,Multi-branch Conv1D kernels on z-scored raw EEG 10-second segments
+Welch Features + SVM,Welch + SVM,10,0.8272310011461379,0.8444653228890923,0.9081153461317152,5,Interpretable Welch relative band-power baseline
+Raw EEG + CNN-LSTM (10s),Raw + CNN-LSTM (10s),10,0.7876641192488865,0.8160116095002456,0.8439105167866513,5,CNN feature extractor followed by LSTM on raw EEG 10-sec segments
+PCA Features + SVM,PCA + SVM,10,0.7028909271537475,0.7784027681001386,0.807439685496161,5,Flattened raw EEG with PCA before SVM
+Raw EEG + LSTM (10s),Raw + LSTM,10,0.7129387492320901,0.7254046904864044,0.7915784786118342,5,LSTM model on z-scored raw EEG 10-sec segments
+Raw EEG + LSTM (15s),Raw + LSTM,15,0.5856437879372176,0.5852113174433784,0.6987066810722222,5,LSTM model on z-scored raw EEG 15-sec segments

@@ -1,2 +1,2 @@
 model_name,window_sec,accuracy,f1,roc_auc,n_folds,notes
-Raw + Baseline CNN,10,0.8642841867403706,0.8746078419006187,0.9243269644213055,5,Baseline Conv1D model on z-scored raw EGG 10-sec segments
+Raw + Baseline CNN,10,0.8352667940121972,0.8464947239756736,0.9202965572343562,5,Baseline Conv1D model on z-scored raw EEG 10-sec segments
