@@ -1,2 +1,0 @@
-window_sec,model_name,accuracy,f1,roc-auc,n-folds,notes
-10.0,RAW + PCA + SVM,0.7028909271537475,0.7784027681001386,0.807439685496161,5,Flattened raw EEG + PCA(50) + SVM (RBF)

@@ -1,0 +1,2 @@
+model_name,window_sec,accuracy,f1,roc_auc,n_folds,notes
+Raw + Deep CNN (10s),10,0.730581850187065,0.7395942516155675,0.9265612973783043,5,Deeper Conv1D model on z-scored raw EEG 10-sec segments

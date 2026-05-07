@@ -1,0 +1,2 @@
+model_name,window_sec,accuracy,f1,roc_auc,n_folds,notes
+Raw + CNN-LSTM (10s),10,0.7876641192488865,0.8160116095002456,0.8439105167866513,5,CNN feature extractor followed by LSTM on raw EEG 10-sec segments

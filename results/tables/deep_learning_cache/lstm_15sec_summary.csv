@@ -1,2 +1,2 @@
 model_name,window_sec,accuracy,f1,roc_auc,n_folds,notes
-RAW + LSTM,15,0.7770292577858835,0.8089162160517244,0.8271430133524031,5,LSTM model on z-scored raw EEG 15-sec segments
+Raw + LSTM,15,0.5856437879372176,0.5852113174433784,0.6987066810722222,5,LSTM model on z-scored raw EEG 15-sec segments

@@ -1,26 +1,32 @@
+from pathlib import Path
+
 # ===============================
 # Paths
 # ===============================
 
-from pathlib import Path
-
 def find_project_root():
     """ Find the project root by walking upward until a .git folder is found."""
     p = Path.cwd()
+
     for parent in [p, *p.parents]:
         if (parent / ".git").exists():
             return parent
+        
     raise FileNotFoundError("Project root (with .git) not found")
 
 PROJECT_ROOT = find_project_root()
-RAW_DATA_DIR = PROJECT_ROOT / "data" / "raw" / "nm000114"
-RESULTS_DIR = PROJECT_ROOT / "results"
+
+DATA_dir = PROJECT_ROOT / "data"
+RAW_DATA_DIR = DATA_dir/ "raw" / "nm000114"
 SEGMENTED_DATA_DIR = PROJECT_ROOT / "data" / "segmented_data"
+
+RESULTS_DIR = PROJECT_ROOT / "results"
+TABLES_DIR = RESULTS_DIR / "table"
+FIGURE_DIR = RESULTS_DIR / "figures"
 
 SEGMENTED_DATA_DIR.mkdir(parents=True, exist_ok=True)
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-
-FIGURE_DIR = RESULTS_DIR / "figures"
+TABLES_DIR.mkdir(parents=True, exist_ok=True)
 FIGURE_DIR.mkdir(parents=True, exist_ok=True)
 
 # ============================
@@ -52,7 +58,15 @@ COMMON_CHANNELS = [
 
 BANDS = {
     'delta': (1,4),
-    'theta': (4,3),
+    'theta': (4,8),
     'alpha': (8,13),
     'beta': (13,30)
 }
+
+# =========================
+# Window Settings
+# =========================
+
+WELCH_WINDOW_SIZES = [5.0, 10.0]
+RAW_WINDOW_SIZE = 10.0
+LSTM_WINDOW_SIZES = [10.0, 15.0]
