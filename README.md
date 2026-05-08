@@ -115,7 +115,7 @@ To retrain them:
 make train-deep
 ```
 ## Key Results 
-- Best model: Multi-Scale CNN (ROC-AUC~0.93)
+- Best model: Deep CNN (ROC-AUC~0.93)
 - Strong baseline: Welch + SVM(ROC-AUC~0.91)
 - Weak baseline: Raw + PCA + SVM (ROC-AUC~0.81)
 
