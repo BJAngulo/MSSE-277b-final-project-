@@ -31,9 +31,9 @@ src/
 ├── evaluation.py           # Cross-validation + metrics
 ├── models.py               # Classical ML models
 ├── deep_learning.py        # Load cached deep model results
-├── standard_augment.py  # Handcrafted EEG augmentations
-├── vae_augment.py       # VAE-based augmentation pipeline
-├── gan_augment.py       # WGAN-GP augmentation pipeline
+├── standard_augment.py     # Handcrafted EEG augmentations
+├── vae_augment.py          # VAE-based augmentation pipeline
+├── gan_augment.py          # WGAN-GP augmentation pipeline
 └── run_analysis.py         # Main analysis pipeline 
 
 scripts/
