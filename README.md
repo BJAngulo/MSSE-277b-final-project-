@@ -1,13 +1,14 @@
-# EEG-MDD Classification 
+# EEG-MDD Classification + Augmentation Study
 
-This project compares classical machine learning and deep learning approaches for EEG-based classification of Major Depressive Disorder (MDD). 
+This project compares classical machine learning, deep learning, and data augmentation strategies for EEG-based classification of Major Depressive Disorder (MDD).
 
 The workflow evaluates:
  
 - Welch band-power feature models
 - Raw EEG baselines (PCA + SVM)
 - Deep learning models (CNN, LSTM, CNN-LSTM)
-- Temporal sensitivity via ablation 
+- Temporal sensitivity via ablation
+- Data augmentation methods (Standard, VAE, GAN) 
 
 ---
 
@@ -30,6 +31,9 @@ src/
 ├── evaluation.py           # Cross-validation + metrics
 ├── models.py               # Classical ML models
 ├── deep_learning.py        # Load cached deep model results
+├── standard_augment.py  # Handcrafted EEG augmentations
+├── vae_augment.py       # VAE-based augmentation pipeline
+├── gan_augment.py       # WGAN-GP augmentation pipeline
 └── run_analysis.py         # Main analysis pipeline 
 
 scripts/
@@ -66,6 +70,43 @@ This will:
 results/tables/unified_model_comparison.csv
 ```
 
+## Data Augmentation Experiments
+ ```bash
+python scripts/run_data_augmentation.py
+```
+
+### Methods Compared
+1. Baseline (No Augmentation)
+- Standard SVM classifier
+- Raw feature distribution only
+
+2. Standard Augmentation
+- Handcrafted EEG transformations
+- Noise injection / signal perturbations
+- Feature-space SVM evaluation
+
+3. VAE Augmentation
+- Variational Autoencoder learned latent space
+- Synthetic feature generation
+- Augmented SVM training pipeline
+
+4. GAN Augmentation (WGAN-GP)
+- Wasserstein GAN with gradient penalty
+- Conditional generation per class
+- Centroid-based filtering of synthetic samples
+- Feature-space augmentation
+
+### Output
+All augmentation experiments produce:
+ ```bash
+results/augmentation_results.csv
+```
+This file contains:
+- Accuracy
+- F1-score
+- Fold-level results
+- Method comparison (Baseline / Standard / VAE / GAN)
+
 ## Deep Learning Models
 Deep learning models (CNN, LSTM, CNN-LSTM) are not retrained by default to avoid long runtimes. 
 
@@ -95,13 +136,19 @@ make train-deep
 - CNN / Deep CNN / MultiScale CNN
 - LSTM / CNN-LSTM
 
+### Augmentation pipeline
+- Baseline (no augmentation)
+- Standard augmentation (handcrafted transforms)
+- VAE-based augmentation (latent space sampling)
+- GAN-based augmentation (WGAN-GP + filtering)
+
 ### Temporal analysis
 - Window size sensitivity
 - Temporal ablation 
 
 
 ### Notes 
-- Segmeneted datasets are cached in "data/segmented_data/"
+- Segmented datasets are cached in "data/segmented_data/"
 - Delete cached files if preprocessing changes:
 ```bash
 make clean-cache
