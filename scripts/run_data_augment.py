@@ -31,8 +31,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.append(str(PROJECT_ROOT))
 
 from src.standard_augment import (
-    X, y, groups, filepaths,
-    augmentations,
+    build_dataset,
+    get_augmentations,
     run_svm_cv
 )
 
@@ -47,6 +47,10 @@ np.random.seed(42)
 torch.manual_seed(42)
 
 
+# Load dataset
+X, y, groups, filepaths = build_dataset()
+
+
 # ==========================
 # Standard augmentation run
 # ==========================
@@ -57,7 +61,7 @@ def run_standard_experiments():
 
     results = []
 
-    for name, aug_fn in augmentations.items():
+    for name, aug_fn in get_augmentations().items():
         print(f"Running: {name}")
 
         res = run_svm_cv(
@@ -104,7 +108,6 @@ def run_gan_experiments():
         groups=groups,
         epochs=1000,
         pool_size=200,
-        feature_dim=X.shape[1]
     )
 
     return pd.DataFrame(results)

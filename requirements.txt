@@ -5,3 +5,4 @@ mne
 scikit-learn
 torch
 ipykernel
+tensorflow

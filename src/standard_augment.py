@@ -1,5 +1,5 @@
 """
-standard_augmentation.py
+standard_augment.py
 
 EEG augmentation module:
 - Band-power features
@@ -21,9 +21,9 @@ from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
 from sklearn.base import clone
 
-from config import N_SPLITS, COMMON_CHANNELS
-from scr.metadata import build_metadata
-from scr.features import extract_band_power_from_array
+from src.config import N_SPLITS, COMMON_CHANNELS
+from src.metadata import build_metadata
+from src.features import extract_band_power_from_array
 
 
 # ======================================================

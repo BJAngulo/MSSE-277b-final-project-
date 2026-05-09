@@ -20,7 +20,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GroupKFold
 from sklearn.base import clone
 
-from config import N_SPLITS
+from src.config import N_SPLITS
 from src.metadata import build_metadata
 from src.features import extract_band_power_from_array
 
