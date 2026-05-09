@@ -72,7 +72,7 @@ def build_unified_model_comparison(classical_results_df, cached_deep_comparison_
         unified_df["n-folds"] = N_SPLITS
 
     unified_df = unified_df.sort_values(
-        by="roc_auc",
+        by=["roc_auc", "accuracy"],
         ascending=False,
         na_position="last",
     ).reset_index(drop=True)

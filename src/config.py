@@ -21,7 +21,7 @@ RAW_DATA_DIR = DATA_dir/ "raw" / "nm000114"
 SEGMENTED_DATA_DIR = PROJECT_ROOT / "data" / "segmented_data"
 
 RESULTS_DIR = PROJECT_ROOT / "results"
-TABLES_DIR = RESULTS_DIR / "table"
+TABLES_DIR = RESULTS_DIR / "tables"
 FIGURE_DIR = RESULTS_DIR / "figures"
 
 SEGMENTED_DATA_DIR.mkdir(parents=True, exist_ok=True)

@@ -66,14 +66,14 @@ def load_window_results():
     """
     Load Welch window size comparison results.
     """
-    return pd.read_csv(TABLES_DIR / "window_size_results.csv")
+    return pd.read_csv(TABLES_DIR / "welch_window_size_results.csv")
 
 def load_temporal_ablation_results():
     """
     Load saved temporal ablation results.
     """
     ablation_results_df = pd.read_csv(TABLES_DIR / "temporal_ablation_10sec.csv")
-    baseline_ablation_df = pd.read_csv(TABLES_DIR / "baseline_ablation_1-sec.csv")
+    baseline_ablation_df = pd.read_csv(TABLES_DIR / "baseline_ablation_10sec.csv")
 
     return baseline_ablation_df, ablation_results_df
 

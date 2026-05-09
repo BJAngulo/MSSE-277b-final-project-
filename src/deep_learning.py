@@ -4,14 +4,14 @@ import pandas as pd
 
 from .config import TABLES_DIR, N_SPLITS
 
-CACHE_DIR = TABLES_DIR / "deep_learning_cache"
+CACHE_DIR = TABLES_DIR / "deep_model_comparison"
 
 def load_cached_deep_results():
     """
     Load cached deep learning comparison results.
     """
 
-    path = TABLES_DIR / "cached_deep_comparison.csv"
+    path = TABLES_DIR / "deep_model_comparison.csv"
 
     df = pd.read_csv(path)
 
@@ -33,7 +33,7 @@ def clean_deep_result_names(df):
 
     model_map = {
         "Raw + MultiScale CNN": "CNN (Multi-Scale)",
-        "Raw + Multiscale CNN": "CNN (Mutli-Scale)",
+        "Raw + Multiscale CNN": "CNN (Multi-Scale)",
         "Raw + Muti-Scale CNN": "CNN (Multi-Scale)",
         "Raw + Baseline CNN": "CNN (Baseline)",
         "Raw + Deep CNN": "CNN (Deep)",
@@ -47,9 +47,8 @@ def clean_deep_result_names(df):
     if "method" in df.columns:
         df["method"] = (
             df["method"]
+            .str.strip()
             .str.replace(r"Raw \+", "", regex=True)
-            .str.replace(r"Raw \+", "", regex=True)
-            .str.replace(r"\s*\(.*?\)", "", regex=True)
         )
 
     return df 
