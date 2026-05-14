@@ -4,10 +4,12 @@ __pycache__/
 .env
 .venv
 venv/
-data/raw/*
+
+# Raw EEG data is required for make run / reproducibility
+# data/raw/*
 data/interim/*
-!data/raw/.gitkeep
 !data/interim/.gitkeep
+
 .DS_Store
 Thumbs.db
 
